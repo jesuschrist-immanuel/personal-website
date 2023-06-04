@@ -216,3 +216,43 @@ export const ap = {
         score: null
     }
 }
+
+export const seniorcourses = {
+    linalg: {
+        course: "Linear Algebra - Foundations to Frontiers",
+        instructor: "University of Texas - Austin",
+        provider: "edX",
+        url: URL('https://www.edx.org/course/linear-algebra-foundations-to-frontiers?index=product&queryID=23f5e639fc9c6aa87e87f5a5908906ed&position=1&results_level=second-level-results&search_index=product&term=Linear+Algebra&campaign=Linear+Algebra+-+Foundations+to+Frontiers&source=edX&product_category=course&placement_url=https%3A%2F%2Fwww.edx.org%2Fsearch')
+    },
+    diffeq: {
+        course: "Introduction to Differential Equations",
+        instructor: "Massachusetts Institute of Technology",
+        provider: "edX",
+        url: URL('https://www.edx.org/course/introduction-to-differential-equations-2?index=product&queryID=ba3d88e76cec4849479f3c11091b5584&position=1&results_level=second-level-results&search_index=product&term=Differential+Equations&campaign=Introduction+to+Differential+Equations&source=edX&product_category=course&placement_url=https%3A%2F%2Fwww.edx.org%2Fsearch')
+    },
+    multvarcalc: {
+        course: "Multivariable Calculus",
+        instructor: "Massachusetts Institute of Technology",
+        provider: "Open CourseWare",
+        url: URL('https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/')
+    },
+    vectorcalc: {
+        course: "Vector Calculus",
+        instructor: "Brilliant",
+        provider: "Brilliant",
+        url: URL('https://brilliant.org/courses/vector-calculus/')
+    },
+    django: {
+        course: "Web Programming with Python and JavaScript",
+        instructor: "Harvard University",
+        provider: "edX",
+        url: URL('https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript?irclickid=T2a2OB1UrzBsRXyVUM3XD0JWUkAXXARm8T5J3U0&utm_source=affiliate&utm_medium=Ziff%20Davis%2C%20LLC.&utm_campaign=edX%20Tracking%20Link_&utm_content=TEXT_LINK&irgwc=1')
+    }
+}
+
+export const duolingo = {
+    duo: {
+        course: "German",
+        provider: "Duolingo"
+    }
+}
