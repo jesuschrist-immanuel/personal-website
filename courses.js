@@ -132,3 +132,87 @@ export const codecademy = {
         weeks: null
     }
 }
+
+export const ap = {
+    calcbc: {
+        course: "AP Calculus BC",
+        type: "Self-Study",
+        score: 5
+    },
+    stats: {
+        course: "AP Statistics",
+        type: "Self-Study",
+        score: 5
+    },
+    csa: {
+        course: "AP Computer Science A",
+        type: "Self-Study",
+        score: 5
+    },
+    physone: {
+        course: "AP Physics 1",
+        type: "Self-Study",
+        score: 3
+    },
+    world: {
+        course: "AP World History",
+        type: "School",
+        score: 5
+    },
+    psych: {
+        course: "AP Psychology",
+        type: "Self-Study",
+        score: null /* To be filled later */
+    },
+    macro: {
+        course: "AP Macroeconomics",
+        type: "Self-Study",
+        score: null /* To be filled later */
+    },
+    micro: {
+        course: "AP Microeconomics",
+        type: "Self-Study",
+        score: null /* To be filled later */
+    },
+    bio: {
+        course: "AP Biology",
+        type: "School",
+        score: null /* To be filled later */
+    },
+    ush: {
+        course: "AP United States History",
+        type: "School",
+        score: null /* To be filled later */
+    },
+    /* Undecided courses */
+    gov: {
+        course: "AP Government and Politics",
+        type: "School",
+        score: null
+    },
+    chem: {
+        course: "AP Chemistry",
+        type: "Self-Study",
+        score: null
+    },
+    envsci: {
+        course: "AP Environmental Science",
+        type: "Self-Study",
+        score: null
+    },
+    hug: {
+        course: "AP Human Geography",
+        type: "Self-Study",
+        score: null
+    },
+    euro: {
+        course: "AP European History",
+        type: "Self-Study",
+        score: null
+    },
+    phystwo: {
+        course: "AP Physics 2",
+        type: "Self-Study",
+        score: null
+    }
+}
