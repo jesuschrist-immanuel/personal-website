@@ -6,6 +6,16 @@
         <link rel="stylesheet" href="contact.css">
     </head>
     <body>
-
+        <div class="container">
+            <form onsubmit="sendEmail(); reset(); return false;">
+                <h3>GET IN TOUCH</h3>
+                <input type="text" id="name" placeholder="John Doe" required>
+                <input type="email" id="email" placeholder="johndoe@example.com" required>
+                <input type="text" id="phone" placeholder="123-456-7890" required>
+                <textarea id="message" rows="4" placeholder="Type your message here."></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        <script src="contact.js"></script>
     </body>
 </html>
