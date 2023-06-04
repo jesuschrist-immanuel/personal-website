@@ -256,3 +256,112 @@ export const duolingo = {
         provider: "Duolingo"
     }
 }
+
+export const datascience = {
+    /* 365 Data Science courses */
+    excel: {
+        course: "Introduction to Microsoft Excel",
+        finishDate: "03-22-2020",
+        hours: 4
+    },
+    advexcel: {
+        course: "Advanced Microsoft Excel",
+        finishDate: "03-23-2020",
+        hours: 2
+    },
+    math: {
+        course: "Mathematics",
+        finishDate: "03-23-2020",
+        hours: 1
+    },
+    tableau: {
+        course: "Introduction to Tableau",
+        finishDate: "03-24-2020",
+        hours: 2
+    },
+    powerbi: {
+        course: "Power BI",
+        finishDate: "04-03-2020",
+        hours: 8
+    },
+    data: {
+        course: "Introduction to Data and Data Science",
+        finishDate: "04-19-2020",
+        hours: 2
+    },
+    stat: {
+        course: "Statistics",
+        finishDate: "04-20-2020",
+        hours: 3
+    },
+    prob: {
+        course: "Probability",
+        finishDate: "04-20-2020",
+        hours: 4
+    },
+    sql: {
+        course: "SQL",
+        finishDate: "04-20-2020",
+        hours: 8
+    },
+    sqltableau: {
+        course: "SQL + Tableau",
+        finishDate: "04-21-2020",
+        hours: 1
+    },
+    python: {
+        course: "Introduction to Python",
+        finishDate: "04-22-2020",
+        hours: 2
+    },
+    bootcamp: {
+        course: "Python Programmer Bootcamp",
+        finishDate: "05-15-2020",
+        hours: 11
+    },
+    git: {
+        course: "Git and Github",
+        finishDate: "05-15-2020",
+        hours: 1
+    },
+    r: {
+        course: "Introduction to R Programming",
+        finishDate: "06-08-2020",
+        hours: 6
+    },
+    mlpy: {
+        course: "Machine Learning in Python",
+        finishDate: "06-14-2020",
+        hours: 5
+    },
+    deep: {
+        course: "Deep Learning with TensorFlow 2.0",
+        finishDate: "06-29-2020",
+        hours: 5
+    },
+    triple: {
+        course: "SQL + Tableau + Python",
+        finishDate: "07-02-2020",
+        hours: 4
+    },
+    dataviz: {
+        course: "Data Visualization with Python, R, Tableau, and Excel",
+        finishDate: "07-15-2020",
+        hours: 9
+    },
+    business: {
+        course: "Introduction to Business Analytics",
+        finishDate: "10-29-2020",
+        hours: 5
+    },
+    webscrape: {
+        course: "Web Scraping and API Fundamentals with Python",
+        finishDate: "06-06-2022",
+        hours: 4
+    },
+    pandas: {
+        course: "Data Cleaning and Preprocessing with pandas",
+        finishDate: "06-26-2022",
+        hours: 2
+    }
+}
