@@ -57,10 +57,12 @@ form button {
 }
 
 #success-message {
+    display: none;
     padding: 15px;
-    background-color: #23db76;
+    background-color: #fff;
     font-size: 20px;
     border: 0;
     outline: none;
-    display: 100px;
+    width: 280px;
+    white-space: nowrap;
 }
