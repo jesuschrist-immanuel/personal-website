@@ -9,12 +9,12 @@
     <body>
         <div class="container">
             <div id="success-message">Message Sent Successfully!</div>
-            <form id="contact-form" method="post" action="contact.php">
+            <form id="contact-form" name="submit-to-google-sheet">
                 <h3>GET IN TOUCH</h3>
-                <input type="text" id="name" name="name" placeholder="John Doe" required>
-                <input type="email" id="email" name="email" placeholder="johndoe@example.com" required>
-                <input type="text" id="phone" name="phone" placeholder="123-456-7890" required>
-                <textarea id="message" rows="4" name="message" placeholder="Type your message here."></textarea>
+                <input type="text" id="name" name="Name" placeholder="John Doe" required>
+                <input type="email" id="email" name="Email" placeholder="johndoe@example.com" required>
+                <input type="text" id="phone" name="Phone" placeholder="123-456-7890" required>
+                <textarea id="message" rows="4" name="Message" placeholder="Type your message here."></textarea>
                 <button type="submit">Send Message</button>
             </form>
         </div>
