@@ -15,13 +15,3 @@ document.getElementById("contact-form").addEventListener("submit", function(even
         document.getElementById("success-message").style.display = "none";
     }, 3000);
 });
-
-const scriptURL = 'https://script.google.com/macros/s/AKfycbyNi5fM8_FKL0sYm5eSwSbobNUwqWRGQZwfMB4joIULoftJt1msZ5Z8EXo6iEciXvGS/exec'
-const form = document.forms['submit-to-google-sheet']
-
-form.addEventListener('submit', e => {
-e.preventDefault()
-fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    .then(response => console.log('Success!', response))
-    .catch(error => console.error('Error!', error.message))
-})
