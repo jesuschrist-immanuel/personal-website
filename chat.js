@@ -36,8 +36,7 @@ function firstBotMessage() {
 
     let time = getTime();
 
-    // document.getElementById("chat-timestap").innerHTML = time;
-    $('#chat-timestamp').append(time);
+    document.getElementById("chat-timestap").innerHTML = time;
     document.getElementById("userInput").scrollIntoView(false);
 }
 
@@ -46,23 +45,19 @@ firstBotMessage();
 function getHardResponse(userText) {
     let botResponse = getBotResponse(userText);
     let botHtml = '<p class="botText"><span>' + botResponse + '</span></p>'
-    // document.getElementById('chatbox').innerHTML = botHtml;
     $('#chatbox').append(botHtml);
     
     document.getElementById("chat-bar-bottom").scrollIntoView(true);
 }
 
 function getResponse() {
-    // let userText = document.getElementById('textInput').value;
     let userText = $('#textInput').val();
 
     if (userText == "") {
         userText = "What is your name?";
     }
     let userHtml = '<p class="userText"><span>' + userText + '</span></p>';
-    // document.getElementById("textInput").value = "";
-    // document.getElementById("chatbox").innerHTML = userHtml;
-    $("#textInput").val("");
+    document.getElementById("textInput").value = "";
     $("#chatbox").append(userHtml);
     document.getElementById("chat-bar-bottom").scrollIntoView(true);
 
@@ -72,10 +67,8 @@ function getResponse() {
 }
 
 function buttonSendText(sampleText) {
-    let userHtml = '<p class="userText"><span>' + sampleText + '</span></p>';
-    // document.getElementById("textInput").value = "";
-    // document.getElementById("chatbox").innerHTML = userHtml;
-    $("#textInput").val("");
+    let userHtml = '<p class="userText"><span>' + sampleText + '</span></p>';   
+    document.getElementById("textInput").value = "";
     $("#chatbox").append(userHtml);
     document.getElementById("chat-bar-bottom").scrollIntoView(true);
 }
@@ -88,8 +81,8 @@ function heartButton() {
     buttonSendText("Heart clicked");
 }
 
-$('#textInput').keydown(function(e) {
-    if (e.code == 'Enter') {
+document.getElementById("textInput").addEventListener("keydown", (e) => {
+    if (e.code == "Enter") {
         getResponse();
     }
 });
