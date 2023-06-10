@@ -1,21 +1,45 @@
-import fs from fs
+import fs from fs;
+
+const axios = require('axios');
+require('dotenv').config();
+const api_key = process.env.OPENAI_API_KEY;
+
+const client = axios.create({
+    headers: {
+        Authorization: "Bearer " + apiKey,
+    }
+})
 
 const { Configuration, OpenAIApi } = require('openai');
 
 const config = new Configuration({
-    apiKey: "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"
+    apiKey: api_key
 });
 
 const openai = new OpenAIApi(config);
 
 async function getCompletionFromMessages( messages, model = 'gpt-3.5-turbo', temperature = 0 ) {
-    const completion = await openai.createChatCompletion({
-        model: model,
-        messages: messages,
-        temperature: temperature       // The degree of randomness in the output
-    });
-
-    return completion.data.choices[0].message.content;
+    console.log('clicked');
+    const options = {
+        method: 'POST',
+        headers: {
+            'Authorization': `Bearer ${api_key}`,
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            model: "gpt-3.5-turbo",
+            messages: messages,
+            maxTokens: 200
+        })
+    }
+    try {
+        const response = await fetch("https://api.openai.com/v1/chat/completions", options)
+        const data = await response.json();
+        console.log(data);
+        return data.choices[0].message.content;
+    } catch {
+        console.error(error);
+    }
 };
 
 // Collapsible
@@ -71,8 +95,8 @@ firstBotMessage();
 
 const initialContext = fs.readFileSync('biography.txt', 'utf8')
 let messages = [
-    {'role': 'system', 'content': initialContext},
-    {'role': 'assistant', 'content': "Hey! I'm Immanuel's chatbot, ImmanuelAI. Ask me anything about Immanuel, and I'll provide you with the scoop on his background, interests, or experiences. Let's start chatting!"}
+    {role: 'system', content: initialContext},
+    {role: 'assistant', content: "Hey! I'm Immanuel's chatbot, ImmanuelAI. Ask me anything about Immanuel, and I'll provide you with the scoop on his background, interests, or experiences. Let's start chatting!"}
 ]
 
 function getHardResponse(userText) {
@@ -82,14 +106,14 @@ function getHardResponse(userText) {
     botHtml = '<p class="botText"><span>' + botResponse + '</span></p>'
     $('#chatbox').append(botHtml);
 
-    messages.push({ 'role': 'user', 'content': userText }, { 'role': 'assistant', 'content': botResponse });
+    messages.push({ role: 'user', content: userText }, { role: 'assistant', content: botResponse });
     console.log(messages);
     
     document.getElementById("chat-bar-bottom").scrollIntoView(true);
 }
 
 async function getBotResponse(input) {
-    return await getCompletionFromMessages([...messages, {'role': 'user', 'content': input}])
+    return await getCompletionFromMessages([...messages, {role: 'user', content: input}])
 }
 
 function getResponse() {
