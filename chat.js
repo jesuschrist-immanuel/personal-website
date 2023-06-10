@@ -1,3 +1,23 @@
+import fs from fs
+
+const { Configuration, OpenAIApi } = require('openai');
+
+const config = new Configuration({
+    apiKey: "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"
+});
+
+const openai = new OpenAIApi(config);
+
+async function getCompletionFromMessages( messages, model = 'gpt-3.5-turbo', temperature = 0 ) {
+    const completion = await openai.createChatCompletion({
+        model: model,
+        messages: messages,
+        temperature: temperature       // The degree of randomness in the output
+    });
+
+    return completion.data.choices[0].message.content;
+};
+
 // Collapsible
 var coll = document.getElementsByClassName("collapsible");
 var text = document.querySelector(".intro-text-image")
@@ -49,12 +69,27 @@ function firstBotMessage() {
 
 firstBotMessage();
 
+const initialContext = fs.readFileSync('biography.txt', 'utf8')
+let messages = [
+    {'role': 'system', 'content': initialContext},
+    {'role': 'assistant', 'content': "Hey! I'm Immanuel's chatbot, ImmanuelAI. Ask me anything about Immanuel, and I'll provide you with the scoop on his background, interests, or experiences. Let's start chatting!"}
+]
+
 function getHardResponse(userText) {
+    let botHtml = "";
+    
     let botResponse = getBotResponse(userText);
-    let botHtml = '<p class="botText"><span>' + botResponse + '</span></p>'
+    botHtml = '<p class="botText"><span>' + botResponse + '</span></p>'
     $('#chatbox').append(botHtml);
+
+    messages.push({ 'role': 'user', 'content': userText }, { 'role': 'assistant', 'content': botResponse });
+    console.log(messages);
     
     document.getElementById("chat-bar-bottom").scrollIntoView(true);
+}
+
+async function getBotResponse(input) {
+    return await getCompletionFromMessages([...messages, {'role': 'user', 'content': input}])
 }
 
 function getResponse() {
