@@ -1,5 +1,7 @@
 // Collapsible
 var coll = document.getElementsByClassName("collapsible");
+var text = document.querySelector(".intro-text-image")
+var image = document.querySelector(".intro-image")
 
 for (let i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function() {
@@ -7,8 +9,13 @@ for (let i = 0; i < coll.length; i++) {
 
         var content = this.nextElementSibling;
 
+        text.classList.add("move-left")
+        image.classList.add("move-left-harder");
+
         if (content.style.maxHeight) {
             content.style.maxHeight = null;
+            text.classList.remove("move-left")
+            image.classList.remove("move-left-harder");
         } else {
             content.style.maxHeight = content.scrollHeight + "px";
         }

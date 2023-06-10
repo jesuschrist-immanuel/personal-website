@@ -1,3 +1,5 @@
+import fs from fs;
+
 const { Configuration, OpenAIApi } = require('openai');
 
 const config = new Configuration({
@@ -15,13 +17,6 @@ async function chatbot() {
     console.log(completion.data.choices[0].message.content);
 }
 
-function getBotResponse(input) {
-    if (input == "What is your name?") {
-        return "Immanuel";
-    }
-    return 'woof';
-}
-
 async function getCompletionFromMessages( messages, model = 'gpt-3.5-turbo', temperature = 0 ) {
     const completion = await openai.createChatCompletion({
         model: model,
@@ -31,3 +26,14 @@ async function getCompletionFromMessages( messages, model = 'gpt-3.5-turbo', tem
 
     return completion.data.choices[0].message.content;
 };
+
+async function getBotResponse(input) {
+    if (input == "What is your name?") {
+         return "Immanuel";
+    }
+    return 'woof';
+
+    
+
+    
+}
