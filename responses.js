@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 require('dotenv').config();
 const api_key = process.env.OPENAI_API_KEY;
 
@@ -8,6 +10,10 @@ const config = new Configuration({
 });
 
 const openai = new OpenAIApi(config);
+
+
+export const initialContext = fs.readFileSync('biography.txt', 'utf8');
+
 
 async function getCompletionFromMessages( messages, model = 'gpt-3.5-turbo', temperature = 0 ) {
     console.log('clicked');

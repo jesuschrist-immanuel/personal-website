@@ -1,4 +1,4 @@
-import fs from fs;
+import { initialContext } from responses.js
 
 // Collapsible
 var coll = document.getElementsByClassName("collapsible");
@@ -51,7 +51,6 @@ function firstBotMessage() {
 
 firstBotMessage();
 
-const initialContext = fs.readFileSync('biography.txt', 'utf8')
 let messages = [
     {
         role: 'system', 

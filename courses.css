@@ -12,12 +12,12 @@
     min-height: 100vh;
     background-color: #303030;
     color: #fff;
-}
+}   
 
 nav {
     background-color: #fff;
     width: 100%;
-    padding: 10px;
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -87,4 +87,58 @@ nav ul li a:hover::after {
 
 .contact:hover {
     background-color: #4e4e4e;
+}
+
+.heading {
+    text-align: center;
+    margin: 50px auto 20px;
+    font-weight: 600;
+}
+
+form {
+    width: 90%;
+    max-width: 450px;
+    margin: auto;
+    height: 55px;
+    background-color: #8c8c8b;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+}
+
+form input {
+    flex: 1;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    background-color: solid;
+    color: #000;
+    font-size: 18px;
+    padding: 0 30px;
+}
+
+form button {
+    padding: 0 40px;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    font-size: 18px;
+    border: 0;
+    outline: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    cursor: pointer;
+}
+
+#result {
+    display: none;
+}
+
+.subheading {
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.img-container {
+    fill: white;
 }

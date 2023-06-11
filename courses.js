@@ -1,3 +1,95 @@
+const result = document.getElementById("result");
+const inpValue = document.getElementById("search-box").value;
+
+
+if (inpValue === "") {
+    const subheadings = document.querySelector('.subheading');
+    for (const subheading in subheadings) {
+        switch (subheading.id) {
+            case 'codecademy':
+                for (const course in codecademy) {
+                    const imageContainer = document.createElement('div');
+                    imageContainer.className = 'img-container';
+                    subheading.append(imageContainer);
+
+                    const textContainer = document.createElement('div');
+                    textContainer.className = 'text-container';
+                    subheading.append(textContainer);
+
+                    const courseName = document.createElement('p');
+                    courseName.id = `${course}`;
+                    courseName.className = 'course-name';
+                    courseName.innerHTML = course.course;
+                    textContainer.append(courseName);
+
+                    const finDate = document.createElement('p');
+                    finDate.id = `${course}-fin`;
+                    finDate.className = 'finish-date';
+                    finDate.innerHTML = formatDate(course.finishDate);
+                    textContainer.append(finDate);
+
+                    if (course.hours !== null) {
+                        const timeHours = document.createElement('p');
+                        timeHours.id = `${course}-time`;
+                        timeHours.className = 'time-duration';
+                        timeHours.innerHTML = `${course.hours} Hours`;
+                        textContainer.append(timeHours);
+                    } else {
+                        const timeWeeks = document.createElement('p');
+                        timeWeeks.id = `${course}-time`;
+                        timeWeeks.className = 'time-duration';
+                        timeWeeks.innerHTML = `${course.hours} Weeks`;
+                        textContainer.append(timeWeeks);
+                    }
+                }
+
+                break;
+            case 'adv-place':
+                
+                
+                break;
+            case 'senior':
+                break;
+            case 'foreign-lang':
+                break;
+            case 'datasci':
+                break;
+            default:
+                break;
+        }
+    }
+} else {
+
+}
+
+function formatDate(dateString) {
+    // Split the date string into month, day, and year
+    const [month, day, year] = dateString.split("-");
+
+    // Create a Date object using the year, month (minus 1 since months are zero-based), and day
+    const date = new Date(year, month - 1, day);
+
+    // Format the date using built-in JavaScript methods
+    const formattedDate = date.toLocaleDateString("en-US", {
+        month: "long",
+        day: "numeric",
+        year: "numeric"
+    });
+
+    return formattedDate;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 export const codecademy = {
     swift: {
         course: "Learn Swift",
@@ -137,82 +229,98 @@ export const ap = {
     calcbc: {
         course: "AP Calculus BC",
         type: "Self-Study",
+        year: 2022,
         score: 5
     },
     stats: {
         course: "AP Statistics",
         type: "Self-Study",
+        year: 2022,
         score: 5
     },
     csa: {
         course: "AP Computer Science A",
         type: "Self-Study",
+        year: 2022,
         score: 5
     },
     physone: {
         course: "AP Physics 1",
         type: "Self-Study",
+        year: 2022,
         score: 3
     },
     world: {
         course: "AP World History",
         type: "School",
+        year: 2022,
         score: 5
     },
     psych: {
         course: "AP Psychology",
         type: "Self-Study",
+        year: 2023,
         score: null /* To be filled later */
     },
     macro: {
         course: "AP Macroeconomics",
         type: "Self-Study",
+        year: 2023,
         score: null /* To be filled later */
     },
     micro: {
         course: "AP Microeconomics",
         type: "Self-Study",
+        year: 2023,
         score: null /* To be filled later */
     },
     bio: {
         course: "AP Biology",
         type: "School",
+        year: 2023,
         score: null /* To be filled later */
     },
     ush: {
         course: "AP United States History",
         type: "School",
+        year: 2023,
         score: null /* To be filled later */
     },
     /* Undecided courses */
     gov: {
         course: "AP Government and Politics",
         type: "School",
+        year: 2024,
         score: null
     },
     chem: {
         course: "AP Chemistry",
         type: "Self-Study",
+        year: 2024,
         score: null
     },
     envsci: {
         course: "AP Environmental Science",
         type: "Self-Study",
+        year: 2024,
         score: null
     },
     hug: {
         course: "AP Human Geography",
         type: "Self-Study",
+        year: 2024,
         score: null
     },
     euro: {
         course: "AP European History",
         type: "Self-Study",
+        year: 2024,
         score: null
     },
     phystwo: {
         course: "AP Physics 2",
         type: "Self-Study",
+        year: 2024,
         score: null
     }
 }
