@@ -1,65 +1,182 @@
 const result = document.getElementById("result");
 const inpValue = document.getElementById("search-box").value;
 
-
-if (inpValue === "") {
-    const subheadings = document.querySelector('.subheading');
-    for (const subheading in subheadings) {
-        switch (subheading.id) {
-            case 'codecademy':
-                for (const course in codecademy) {
-                    const imageContainer = document.createElement('div');
-                    imageContainer.className = 'img-container';
-                    subheading.append(imageContainer);
-
-                    const textContainer = document.createElement('div');
-                    textContainer.className = 'text-container';
-                    subheading.append(textContainer);
-
-                    const courseName = document.createElement('p');
-                    courseName.id = `${course}`;
-                    courseName.className = 'course-name';
-                    courseName.innerHTML = course.course;
-                    textContainer.append(courseName);
-
-                    const finDate = document.createElement('p');
-                    finDate.id = `${course}-fin`;
-                    finDate.className = 'finish-date';
-                    finDate.innerHTML = formatDate(course.finishDate);
-                    textContainer.append(finDate);
-
-                    if (course.hours !== null) {
+const renderData = () => {
+    if (inpValue === "") {
+        const subheadings = document.querySelector('.subheading');
+        for (const subheading in subheadings) {
+            switch (subheading.id) {
+                case 'codecademy':
+                    codecademy.map((course) => {
+                        const imageContainer = document.createElement('div');
+                        imageContainer.className = 'img-container';
+                        subheading.append(imageContainer);
+    
+                        const textContainer = document.createElement('div');
+                        textContainer.className = 'text-container';
+                        subheading.append(textContainer);
+    
+                        const courseName = document.createElement('p');
+                        courseName.id = `code-${course}`;
+                        courseName.className = 'course-name';
+                        courseName.innerHTML = course.course;
+                        textContainer.append(courseName);
+    
+                        const finDate = document.createElement('p');
+                        finDate.id = `code-${course}-fin`;
+                        finDate.className = 'finish-date';
+                        finDate.innerHTML = formatDate(course.finishDate);
+                        textContainer.append(finDate);
+    
+                        if (course.hours !== null) {
+                            const timeHours = document.createElement('p');
+                            timeHours.id = `code-${course}-time`;
+                            timeHours.className = 'time-duration';
+                            timeHours.innerHTML = `${course.hours} Hours`;
+                            textContainer.append(timeHours);
+                        } else {
+                            const timeWeeks = document.createElement('p');
+                            timeWeeks.id = `code-${course}-time`;
+                            timeWeeks.className = 'time-duration';
+                            timeWeeks.innerHTML = `${course.weeks} Weeks`;
+                            textContainer.append(timeWeeks);
+                        }
+                    })
+    
+                    break;
+                case 'adv-place':
+                    ap.map((course) => {
+                        const imageContainer = document.createElement('div');
+                        imageContainer.className = 'img-container';
+                        subheading.append(imageContainer);
+    
+                        const textContainer = document.createElement('div');
+                        textContainer.className = 'text-container';
+                        subheading.append(textContainer);
+    
+                        const courseName = document.createElement('p');
+                        courseName.id = `ap-${course}`;
+                        courseName.className = 'course-name';
+                        courseName.innerHTML = course.course;
+                        textContainer.append(courseName);
+    
+                        const studyType = document.createElement('p');
+                        studyType.id = `ap-${course}-type`;
+                        studyType.className = 'study-type';
+                        studyType.innerHTML = course.type;
+                        textContainer.append(studyType);
+    
+                        if (course.score !== null) {
+                            const courseYear = document.createElement('p');
+                            courseYear.id = `ap-${course}-year`;
+                            courseYear.className = 'course-year';
+                            courseYear.innerHTML = course.year;
+                            textContainer.append(courseYear);
+    
+                            const examScore = document.createElement('p');
+                            examScore.id = `ap-${course}-score`;
+                            examScore.className = 'exam-score';
+                            examScore.innerHTML = course.score;
+                            textContainer.append(examScore);
+                        }
+                    })
+                    
+                    break;
+                case 'senior':
+                    seniorcourses.map((course) => {
+                        const imageContainer = document.createElement('div');
+                        imageContainer.className = 'img-container';
+                        subheading.append(imageContainer);
+    
+                        const textContainer = document.createElement('div');
+                        textContainer.className = 'text-container';
+                        subheading.append(textContainer);
+    
+                        const courseName = document.createElement('p');
+                        courseName.id = `senior-${course}`;
+                        courseName.className = 'course-name';
+                        courseName.innerHTML = course.course;
+                        textContainer.append(courseName);
+    
+                        const instructorName = document.createElement('p');
+                        instructorName.id = `senior-${course}-instructor`;
+                        instructorName.className = 'course-instructor';
+                        instructorName.innerHTML = course.instructor;
+                        textContainer.append(instructorName);
+    
+                        const providerName = document.createElement('p');
+                        providerName.id = `senior-${course}-provider`;
+                        providerName.className = 'course-provider';
+                        providerName.innerHTML = course.provider;
+                        textContainer.append(providerName);
+                    })
+                    
+                    break;
+                case 'foreign-lang':   
+                    foreignlang.map((course) => {
+                        const imageContainer = document.createElement('div');
+                        imageContainer.className = 'img-container';
+                        subheading.append(imageContainer);
+    
+                        const textContainer = document.createElement('div');
+                        textContainer.className = 'text-container';
+                        subheading.append(textContainer);
+    
+                        const courseName = document.createElement('p');
+                        courseName.id = `lang-${course}`;
+                        courseName.className = 'course-name';
+                        courseName.innerHTML = course.course;
+                        textContainer.append(courseName);
+    
+                        const providerName = document.createElement('p');
+                        providerName.id = `lang-${course}-provider`;
+                        providerName.className = 'course-provider';
+                        providerName.innerHTML = course.provider;
+                        textContainer.append(providerName);
+    
+                        const courseGrade = document.createElement('p');
+                        courseGrade.id = `lang-${course}-grade`;
+                        courseGrade.className = 'course-grade';
+                        courseGrade.innerHTML = course.grade;
+                        textContainer.append(courseGrade);
+                    })
+    
+                    break;
+                case 'datasci':
+                    datascience.map((course) => {
+                        const imageContainer = document.createElement('div');
+                        imageContainer.className = 'img-container';
+                        subheading.append(imageContainer);
+    
+                        const textContainer = document.createElement('div');
+                        textContainer.className = 'text-container';
+                        subheading.append(textContainer);
+    
+                        const courseName = document.createElement('p');
+                        courseName.id = `datasci-${course}`;
+                        courseName.className = 'course-name';
+                        courseName.innerHTML = course.course;
+                        textContainer.append(courseName);
+    
+                        const finDate = document.createElement('p');
+                        finDate.id = `datasci-${course}-fin`;
+                        finDate.className = 'finish-date';
+                        finDate.innerHTML = formatDate(course.finishDate);
+                        textContainer.append(finDate);
+                        
                         const timeHours = document.createElement('p');
-                        timeHours.id = `${course}-time`;
+                        timeHours.id = `datasci-${course}-time`;
                         timeHours.className = 'time-duration';
-                        timeHours.innerHTML = `${course.hours} Hours`;
+                        timeHours.innerHTML = course.hours;
                         textContainer.append(timeHours);
-                    } else {
-                        const timeWeeks = document.createElement('p');
-                        timeWeeks.id = `${course}-time`;
-                        timeWeeks.className = 'time-duration';
-                        timeWeeks.innerHTML = `${course.hours} Weeks`;
-                        textContainer.append(timeWeeks);
-                    }
-                }
-
-                break;
-            case 'adv-place':
-                
-                
-                break;
-            case 'senior':
-                break;
-            case 'foreign-lang':
-                break;
-            case 'datasci':
-                break;
-            default:
-                break;
+                    })
+    
+                    break;
+                default:
+                    break;
+            }
         }
     }
-} else {
-
 }
 
 function formatDate(dateString) {
@@ -80,17 +197,7 @@ function formatDate(dateString) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-export const codecademy = {
+const codecademy = {
     swift: {
         course: "Learn Swift",
         finishDate: "05-28-2022",
@@ -225,7 +332,7 @@ export const codecademy = {
     }
 }
 
-export const ap = {
+const ap = {
     calcbc: {
         course: "AP Calculus BC",
         type: "Self-Study",
@@ -325,47 +432,58 @@ export const ap = {
     }
 }
 
-export const seniorcourses = {
+const seniorcourses = {
     linalg: {
         course: "Linear Algebra - Foundations to Frontiers",
         instructor: "University of Texas - Austin",
         provider: "edX",
-        url: URL('https://www.edx.org/course/linear-algebra-foundations-to-frontiers?index=product&queryID=23f5e639fc9c6aa87e87f5a5908906ed&position=1&results_level=second-level-results&search_index=product&term=Linear+Algebra&campaign=Linear+Algebra+-+Foundations+to+Frontiers&source=edX&product_category=course&placement_url=https%3A%2F%2Fwww.edx.org%2Fsearch')
+        url: 'https://www.edx.org/course/linear-algebra-foundations-to-frontiers?index=product&queryID=23f5e639fc9c6aa87e87f5a5908906ed&position=1&results_level=second-level-results&search_index=product&term=Linear+Algebra&campaign=Linear+Algebra+-+Foundations+to+Frontiers&source=edX&product_category=course&placement_url=https%3A%2F%2Fwww.edx.org%2Fsearch'
     },
     diffeq: {
         course: "Introduction to Differential Equations",
         instructor: "Massachusetts Institute of Technology",
         provider: "edX",
-        url: URL('https://www.edx.org/course/introduction-to-differential-equations-2?index=product&queryID=ba3d88e76cec4849479f3c11091b5584&position=1&results_level=second-level-results&search_index=product&term=Differential+Equations&campaign=Introduction+to+Differential+Equations&source=edX&product_category=course&placement_url=https%3A%2F%2Fwww.edx.org%2Fsearch')
+        url: 'https://www.edx.org/course/introduction-to-differential-equations-2?index=product&queryID=ba3d88e76cec4849479f3c11091b5584&position=1&results_level=second-level-results&search_index=product&term=Differential+Equations&campaign=Introduction+to+Differential+Equations&source=edX&product_category=course&placement_url=https%3A%2F%2Fwww.edx.org%2Fsearch'
     },
     multvarcalc: {
         course: "Multivariable Calculus",
         instructor: "Massachusetts Institute of Technology",
         provider: "Open CourseWare",
-        url: URL('https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/')
+        url: 'https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/'
     },
     vectorcalc: {
         course: "Vector Calculus",
         instructor: "Brilliant",
         provider: "Brilliant",
-        url: URL('https://brilliant.org/courses/vector-calculus/')
+        url: 'https://brilliant.org/courses/vector-calculus/'
     },
     django: {
         course: "Web Programming with Python and JavaScript",
         instructor: "Harvard University",
         provider: "edX",
-        url: URL('https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript?irclickid=T2a2OB1UrzBsRXyVUM3XD0JWUkAXXARm8T5J3U0&utm_source=affiliate&utm_medium=Ziff%20Davis%2C%20LLC.&utm_campaign=edX%20Tracking%20Link_&utm_content=TEXT_LINK&irgwc=1')
+        url: 'https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript?irclickid=T2a2OB1UrzBsRXyVUM3XD0JWUkAXXARm8T5J3U0&utm_source=affiliate&utm_medium=Ziff%20Davis%2C%20LLC.&utm_campaign=edX%20Tracking%20Link_&utm_content=TEXT_LINK&irgwc=1'
     }
 }
 
-export const duolingo = {
+const foreignlang = {
+    span1: {
+        course: "Spanish 1",
+        provider: "School",
+        grade: 100
+    },
+    span2: {
+        course: "Spanish 2",
+        provider: "School",
+        grade: 100
+    },
     duo: {
         course: "German",
-        provider: "Duolingo"
+        provider: "Duolingo",
+        grade: null
     }
 }
 
-export const datascience = {
+const datascience = {
     /* 365 Data Science courses */
     excel: {
         course: "Introduction to Microsoft Excel",
@@ -473,3 +591,5 @@ export const datascience = {
         hours: 2
     }
 }
+
+document.addEventListener("DOMContentLoaded", renderData);
