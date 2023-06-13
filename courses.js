@@ -25,6 +25,7 @@ const codecademy = {
         finishDate: "05-28-2022",
         hours: 25,
         weeks: null,
+        link: 'https://www.codecademy.com/learn/learn-swift',
         image: '/assets/swift-logo.png'
     },
     html: {
@@ -32,6 +33,7 @@ const codecademy = {
         finishDate: "06-12-2022",
         hours: 9,
         weeks: null,
+        link: 'https://www.codecademy.com/learn/learn-html',
         image: '/assets/html-logo.png'
     },
     css: {
@@ -39,6 +41,7 @@ const codecademy = {
         finishDate: "06-18-2022",
         hours: 10,
         weeks: null,
+        link: 'https://www.codecademy.com/learn/learn-css',
         image: '/assets/css-logo.png'
     },
     cplusplus: {
@@ -46,6 +49,7 @@ const codecademy = {
         finishDate: "07-01-2022",
         hours: 25,
         weeks: null,
+        link: 'https://www.codecademy.com/learn/learn-c-plus-plus',
         image: '/assets/cplusplus-logo.png'
     },
     intermcplusplus: {
@@ -53,6 +57,7 @@ const codecademy = {
         finishDate: "07-05-2022",
         hours: 9,
         weeks: null,
+        link: 'https://www.codecademy.com/learn/c-plus-plus-for-programmers',
         image: '/assets/cplusplus-logo.png'
     },
     java: {
@@ -60,6 +65,7 @@ const codecademy = {
         finishDate: "07-13-2022",
         hours: 25,
         weeks: null,
+        link: 'https://www.codecademy.com/learn/learn-java',
         image: '/assets/java-logo.png'
     },
     beautifulsoup: {
@@ -67,6 +73,7 @@ const codecademy = {
         finishDate: "07-15-2022",
         hours: 1,
         weeks: null,
+        link: 'https://www.codecademy.com/learn/learn-web-scraping',
         image: '/assets/beautiful-soup.png'
     },
     intermswift: {
@@ -74,6 +81,7 @@ const codecademy = {
         finishDate: "07-17-2022",
         hours: 9,
         weeks: null,
+        link: 'https://www.codecademy.com/learn/learn-intermediate-swift',
         image: '/assets/swift-logo.png'
     },
     cmdline: {
@@ -81,6 +89,7 @@ const codecademy = {
         finishDate: "07-23-2022",
         hours: 8,
         weeks: null,
+        link: 'https://www.codecademy.com/learn/learn-the-command-line',
         image: '/assets/cmd-line.png'
     },
     javascript: {
@@ -88,6 +97,7 @@ const codecademy = {
         finishDate: "08-14-2022",
         hours: 20,
         weeks: null,
+        link: 'https://www.codecademy.com/learn/introduction-to-javascript',
         image: '/assets/js-logo.png'
     },
     kotlin: {
@@ -95,6 +105,7 @@ const codecademy = {
         finishDate: "10-23-2022",
         hours: 15,
         weeks: null,
+        link: 'https://www.codecademy.com/learn/learn-kotlin',
         image: '/assets/kotlin-logo.png'
     },
     nflstats: {
@@ -102,6 +113,7 @@ const codecademy = {
         finishDate: "10-26-2022",
         hours: 1,
         weeks: null,
+        link: 'https://www.codecademy.com/learn/case-study-analyze-nfl-stats',
         image: '/assets/python-logo.png'
     },
     interactivejs: {
@@ -109,6 +121,7 @@ const codecademy = {
         finishDate: "11-05-2022",
         hours: 7,
         weeks: null,
+        link: 'https://www.codecademy.com/learn/build-interactive-websites',
         image: '/assets/js-logo.png'
     },
     ioslevelone: {
@@ -116,6 +129,7 @@ const codecademy = {
         finishDate: "12-28-2022",
         hours: null,
         weeks: 10,
+        link: 'https://www.codecademy.com/learn/paths/build-ios-apps-with-swiftui',
         image: '/assets/swift-logo.png'
     },
     iosleveltwo: {
@@ -123,6 +137,7 @@ const codecademy = {
         finishDate: "01-14-2023",
         hours: null,
         weeks: 14,
+        link: 'https://www.codecademy.com/learn/paths/build-an-intermediate-ios-app-with-swiftui',
         image: '/assets/swift-logo.png'
     },
     asyncjs: {
@@ -130,6 +145,7 @@ const codecademy = {
         finishDate: "01-14-2023",
         hours: 1,
         weeks: null,
+        link: 'https://www.codecademy.com/learn/asynchronous-javascript',
         image: '/assets/js-logo.png'
     },
     linalg: {
@@ -137,6 +153,7 @@ const codecademy = {
         finishDate: "04-03-2023",
         hours: 2,
         weeks: null,
+        link: 'https://www.codecademy.com/learn/learn-linear-algebra',
         image: '/assets/linalg-logo.png'
     },
     chatgpt: {
@@ -144,6 +161,7 @@ const codecademy = {
         finishDate: "04-19-2023",
         hours: 7,
         weeks: null,
+        link: 'https://www.codecademy.com/learn/intro-to-chatgpt',
         image: '/assets/chatgpt-icon.png'
     },
     jquery: {
@@ -151,6 +169,7 @@ const codecademy = {
         finishDate: "05-05-2023",
         hours: 9,
         weeks: null,
+        link: 'https://www.codecademy.com/learn/learn-jquery',
         image: '/assets/jquery-logo.png'
     },
     nodejs: {
@@ -158,6 +177,7 @@ const codecademy = {
         finishDate: "05-14-2023",
         hours: 7,
         weeks: null,
+        link: 'https://www.codecademy.com/learn/learn-node-js',
         image: '/assets/nodejs-logo.png'
     },
     react: {
@@ -165,6 +185,7 @@ const codecademy = {
         finishDate: "05-30-2023",
         hours: 15,
         weeks: null,
+        link: 'https://www.codecademy.com/learn/react-101',
         image: '/assets/react-logo.png'
     },
     reactnative: {
@@ -172,7 +193,16 @@ const codecademy = {
         finishDate: "06-02-2023",
         hours: 7,
         weeks: null,
+        link: 'https://www.codecademy.com/learn/learn-react-native',
         image: '/assets/react-logo.png'
+    }
+}
+
+const deeplearning = {
+    deeplearningai: {
+        course: "ChatGPT Prompt Engineering for Developers",
+        finDate: "05-29-2023",
+        hours: 1
     }
 }
 
@@ -332,106 +362,127 @@ const datascience = {
     excel: {
         course: "Introduction to Microsoft Excel",
         finishDate: "03-22-2020",
-        hours: 4
+        hours: 4,
+        link: "https://learn.365datascience.com/courses/preview/introduction-to-microsoft-excel/"
     },
     advexcel: {
         course: "Advanced Microsoft Excel",
         finishDate: "03-23-2020",
-        hours: 2
+        hours: 2,
+        link: "https://learn.365datascience.com/courses/preview/advanced-microsoft-excel/"
     },
     math: {
         course: "Mathematics",
         finishDate: "03-23-2020",
-        hours: 1
+        hours: 1,
+        link: "https://learn.365datascience.com/courses/preview/mathematics/"
     },
     tableau: {
         course: "Introduction to Tableau",
         finishDate: "03-24-2020",
-        hours: 2
+        hours: 2,
+        link: "https://learn.365datascience.com/courses/preview/tableau/"
     },
     powerbi: {
         course: "Power BI",
         finishDate: "04-03-2020",
-        hours: 8
+        hours: 8,
+        link: "https://learn.365datascience.com/courses/preview/introduction-to-power-bi/"
     },
     data: {
         course: "Introduction to Data and Data Science",
         finishDate: "04-19-2020",
-        hours: 2
+        hours: 2,
+        link: "https://learn.365datascience.com/courses/preview/intro-to-data-and-data-science/"
     },
     stat: {
         course: "Statistics",
         finishDate: "04-20-2020",
-        hours: 3
+        hours: 3,
+        link: "https://learn.365datascience.com/courses/preview/statistics/"
     },
     prob: {
         course: "Probability",
         finishDate: "04-20-2020",
-        hours: 4
+        hours: 4,
+        link: "https://learn.365datascience.com/courses/preview/probability/"
     },
     sql: {
         course: "SQL",
         finishDate: "04-20-2020",
-        hours: 8
+        hours: 8,
+        link: "https://learn.365datascience.com/courses/preview/sql/"
     },
     sqltableau: {
         course: "SQL + Tableau",
         finishDate: "04-21-2020",
-        hours: 1
+        hours: 1,
+        link: "https://learn.365datascience.com/courses/preview/sql-tableau/"
     },
     python: {
         course: "Introduction to Python",
         finishDate: "04-22-2020",
-        hours: 2
+        hours: 2,
+        link: "https://learn.365datascience.com/courses/preview/introduction-to-python/"
     },
     bootcamp: {
         course: "Python Programmer Bootcamp",
         finishDate: "05-15-2020",
-        hours: 11
+        hours: 11,
+        link: "https://learn.365datascience.com/courses/preview/python-programmer-bootcamp/"
     },
     git: {
         course: "Git and Github",
         finishDate: "05-15-2020",
-        hours: 1
+        hours: 1,
+        link: "https://learn.365datascience.com/courses/preview/git-and-github/"
     },
     r: {
         course: "Introduction to R Programming",
         finishDate: "06-08-2020",
-        hours: 6
+        hours: 6,
+        link: "https://learn.365datascience.com/courses/preview/introduction-to-r-programming/"
     },
     mlpy: {
         course: "Machine Learning in Python",
         finishDate: "06-14-2020",
-        hours: 5
+        hours: 5,
+        link: "https://learn.365datascience.com/courses/preview/machine-learning-in-python/"
     },
     deep: {
         course: "Deep Learning with TensorFlow 2.0",
         finishDate: "06-29-2020",
-        hours: 5
+        hours: 5,
+        link: "https://learn.365datascience.com/courses/preview/deep-learning-with-tensorflow-2-0/"
     },
     triple: {
         course: "SQL + Tableau + Python",
         finishDate: "07-02-2020",
-        hours: 4
+        hours: 4,
+        link: "https://learn.365datascience.com/courses/preview/sql-tableau-python/"
     },
     dataviz: {
         course: "Data Visualization with Python, R, Tableau, and Excel",
         finishDate: "07-15-2020",
-        hours: 9
+        hours: 9,
+        link: "https://learn.365datascience.com/courses/preview/data-visualization/"
     },
     business: {
         course: "Introduction to Business Analytics",
         finishDate: "10-29-2020",
-        hours: 5
+        hours: 5,
+        link: "https://learn.365datascience.com/courses/preview/introduction-to-business-analytics/"
     },
     webscrape: {
         course: "Web Scraping and API Fundamentals with Python",
         finishDate: "06-06-2022",
-        hours: 4
+        hours: 4,
+        link: "https://learn.365datascience.com/courses/preview/web-scraping-and-api-fundamentals-in-python/"
     },
     pandas: {
         course: "Data Cleaning and Preprocessing with pandas",
         finishDate: "06-26-2022",
-        hours: 2
+        hours: 2,
+        link: "https://learn.365datascience.com/courses/preview/data-cleaning-preprocessing-pandas/"
     }
 }
