@@ -278,10 +278,10 @@ const ap = {
 
 const seniorcourses = {
     linalg: {
-        course: "Linear Algebra - Foundations to Frontiers",
-        instructor: "University of Texas - Austin",
-        provider: "edX",
-        url: 'https://www.edx.org/course/linear-algebra-foundations-to-frontiers?index=product&queryID=23f5e639fc9c6aa87e87f5a5908906ed&position=1&results_level=second-level-results&search_index=product&term=Linear+Algebra&campaign=Linear+Algebra+-+Foundations+to+Frontiers&source=edX&product_category=course&placement_url=https%3A%2F%2Fwww.edx.org%2Fsearch'
+        course: "Linear Algebra",
+        instructor: "Massachusetts Institute of Technology",
+        provider: "Open CourseWare",
+        url: 'https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/'
     },
     diffeq: {
         course: "Introduction to Differential Equations",
