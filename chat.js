@@ -1,4 +1,5 @@
-import { initialContext } from responses.js
+import { readFile } from 'fs';
+const initialContext = readFile('biography.txt', 'utf8');
 
 // Collapsible
 var coll = document.getElementsByClassName("collapsible");
@@ -73,6 +74,10 @@ function getHardResponse(userText) {
     console.log(messages);
     
     document.getElementById("chat-bar-bottom").scrollIntoView(true);
+}
+
+async function getBotResponse(input) {
+    return await getCompletionFromMessages([...messages, {role: 'user', content: input}])
 }
 
 function getResponse() {
