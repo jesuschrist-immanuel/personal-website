@@ -133,6 +133,7 @@ form button {
     border-bottom-right-radius: 8px;
     cursor: pointer;
 }
+
 a {
     text-decoration: none;
 }
@@ -141,13 +142,24 @@ a h1 {
     text-decoration-color: blue;
 }
 
-#result {
-    display: none;
-}
-
 .subheading {
     margin-left: 20px;
     margin-top: 20px;
+}
+
+.ap-heading-container {
+    display: flex;
+    align-items: center;
+}
+
+#report-button {
+    height: 32px;
+    padding: 0 15px;
+    margin-left: 20px;
+    background-color: greenyellow;
+    font-size: large;
+    cursor: pointer;
+
 }
 
 #codecademy-heading, #deeplearning-heading, #datascience-heading {

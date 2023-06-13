@@ -496,7 +496,10 @@
                     </div>
                 </section>
                 <section id="adv-place" class="subheading">
-                    <h1>Advanced Placement</h1>
+                    <div class="ap-heading-container">
+                        <h1>Advanced Placement</h1>
+                        <a href="/assets/Score Report.pdf" download><button id="report-button">2022 Report</button></a>
+                    </div>
                     <div class="courses-info">
                         <div class="card-container">
                             <div class="img-container">
@@ -1263,10 +1266,6 @@
                     </div>
                 </section>
             </main>
-
-            <div id="result">
-
-            </div>
         </div>
 
         
@@ -1287,13 +1286,13 @@
 
         <script>
             document.getElementById('codecademy-heading').addEventListener('click', () => {
-                window.location.href = "https://www.codecademy.com/";
+                window.open("https://www.codecademy.com/", "_blank");
             });
             document.getElementById('deeplearning-heading').addEventListener('click', () => {
-                window.location.href = "https://www.deeplearning.ai/courses/";
+                window.open("https://www.deeplearning.ai/courses/", "_blank");
             });
             document.getElementById('datascience-heading').addEventListener('click', () => {
-                window.location.href = "https://learn.365datascience.com/";
+                window.open("https://learn.365datascience.com/", "_blank");
             });
         </script>
 
