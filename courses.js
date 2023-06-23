@@ -195,6 +195,14 @@ const codecademy = {
         weeks: null,
         link: 'https://www.codecademy.com/learn/learn-react-native',
         image: '/assets/react-logo.png'
+    },
+    redux: {
+        course: "Learn Redux",
+        finishDate: "06-23-2023",
+        hours: 10,
+        weeks: null,
+        link: 'https://www.codecademy.com/learn/learn-redux',
+        image: '/assets/redux-logo.png'
     }
 }
 
