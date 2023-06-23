@@ -251,20 +251,20 @@ nav ul li a:hover::after {
   border-radius: 50%;
 }
 
-.splotch::before {
+/* .splotch::before {
   content: "";
   position: absolute;
   width: 110%;
   height: 110%;
-  background-color: rgba(128, 0, 128, 0.1); /* Adjust the splotch color and opacity */
+  background-color: rgba(128, 0, 128, 0.1);
   border-radius: 50%;
   z-index: -1;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
+} */
 
-.move-left {
+/* .move-left {
   animation: moveToLeft 1s forwards;
 }
 
@@ -277,7 +277,7 @@ nav ul li a:hover::after {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-80px); /* Adjust the value (-80px) based on how far you want the elements to move */
+    transform: translateX(-80px);
   }
 }
 
@@ -288,4 +288,4 @@ nav ul li a:hover::after {
   to {
     transform: translateX(-240px);
   }
-}
+} */
