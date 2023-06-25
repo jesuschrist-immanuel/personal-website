@@ -118,6 +118,7 @@ function buttonSendText(sampleText) {
 document.getElementById("send-icon").addEventListener("click", getResponse);
 
 document.getElementById("reset-icon").addEventListener("click", () => {
+    const chatbox = document.getElementById("chatbox");
     const userTextElements = chatbox.getElementsByClassName("userText");
     const botTextElements = chatbox.getElementsByClassName("botText");
 
