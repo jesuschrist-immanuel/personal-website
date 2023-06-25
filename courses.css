@@ -147,6 +147,22 @@ a h1 {
     margin-top: 20px;
 }
 
+.codecademy-heading-container {
+    display: flex;
+    align-items: center;
+}
+
+#progress-button {
+    height: 32px;
+    padding: 0 15px;
+    margin-left: 20px;
+    background-color: #3A10E5;
+    color: white;
+    font-size: large;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
 .ap-heading-container {
     display: flex;
     align-items: center;
@@ -159,7 +175,6 @@ a h1 {
     background-color: greenyellow;
     font-size: large;
     cursor: pointer;
-
 }
 
 #codecademy-heading, #deeplearning-heading, #datascience-heading {
