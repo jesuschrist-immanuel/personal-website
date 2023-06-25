@@ -1,5 +1,5 @@
-const result = document.getElementById("result");
-const inpValue = document.getElementById("search-box").value;
+// const result = document.getElementById("result");
+// const inpValue = document.getElementById("search-box").value;
 
 function formatDate(dateString) {
     // Split the date string into month, day, and year

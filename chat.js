@@ -1,5 +1,5 @@
-import { readFile } from 'fs';
-const initialContext = readFile('biography.txt', 'utf8');
+// import { readFile } from 'fs';
+const initialContext = fetch('biography.txt');
 
 // Collapsible
 var coll = document.getElementsByClassName("collapsible");
@@ -77,7 +77,13 @@ function getHardResponse(userText) {
 }
 
 async function getBotResponse(input) {
-    return await getCompletionFromMessages([...messages, {role: 'user', content: input}])
+    try {
+        return await getCompletionFromMessages([...messages, {role: 'user', content: input}])
+    } catch {
+        console.error(error)
+        return "My name is Immanuel"
+    }
+    
 }
 
 function getResponse() {
