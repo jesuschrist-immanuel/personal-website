@@ -27,10 +27,11 @@ async function getCompletionFromMessages( messages, model = 'gpt-3.5-turbo', tem
     }
     try {
         const completion = await fetch("https://api.openai.com/v1/chat/completions", options)
-        const data = await response.json();
+        const data = await completion.json();
         console.log(data);
-        return data.choices[0].message.content;
-    } catch {
-        console.error(error);
+        return data.choices[0].message.content.text;
+    } catch(error) {
+        console.log(error);
+        console.log("Something went wrong.")
     }
 };

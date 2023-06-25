@@ -1,5 +1,11 @@
-// import { readFile } from 'fs';
-const initialContext = fetch('biography.txt');
+async function getInitialContext() {  
+    const biography = await fetch('biography.txt');
+    const initialContext = await biography.text();
+    return initialContext
+}
+
+const initialContext = await getInitialContext();
+console.log(initialContext);
 
 // Collapsible
 var coll = document.getElementsByClassName("collapsible");
@@ -7,7 +13,7 @@ var coll = document.getElementsByClassName("collapsible");
 // var image = document.querySelector(".intro-image");
 
 for (let i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function() {
+    coll[i].addEventListener("click", function () {
         this.classList.toggle("active");
 
         var content = this.nextElementSibling;
@@ -42,7 +48,7 @@ function getTime() {
 function firstBotMessage() {
     const firstMessage = "Hey! I'm Immanuel's chatbot, <b>ImmanuelAI</b>. Ask me anything about Immanuel, and I'll provide you with the scoop on his background, interests, or experiences. Let's start chatting!";
 
-    document.getElementById("botStarterMessage").innerHTML = '<p class="botText"><span>' + firstMessage + '</span></p>';
+    document.getElementById("botStarterMessage").innerHTML = '<span>' + firstMessage + '</span>';
 
     let time = getTime();
 
@@ -54,36 +60,36 @@ firstBotMessage();
 
 let messages = [
     {
-        role: 'system', 
+        role: 'system',
         content: initialContext
     },
     {
-        role: 'assistant', 
+        role: 'assistant',
         content: "Hey! I'm Immanuel's chatbot, ImmanuelAI. Ask me anything about Immanuel, and I'll provide you with the scoop on his background, interests, or experiences. Let's start chatting!"
     }
 ]
 
-function getHardResponse(userText) {
+async function getHardResponse(userText) {
     let botHtml = "";
-    
-    let botResponse = getBotResponse(userText);
+
+    let botResponse = await getBotResponse(userText);
+    // console.log(botResponse)
     botHtml = '<p class="botText"><span>' + botResponse + '</span></p>'
     $('#chatbox').append(botHtml);
 
     messages.push({ role: 'user', content: userText }, { role: 'assistant', content: botResponse });
-    console.log(messages);
-    
+    // console.log(messages);
+
     document.getElementById("chat-bar-bottom").scrollIntoView(true);
 }
 
 async function getBotResponse(input) {
     try {
-        return await getCompletionFromMessages([...messages, {role: 'user', content: input}])
-    } catch {
-        console.error(error)
-        return "My name is Immanuel"
+        return await getCompletionFromMessages([...messages, { role: 'user', content: input }])
+    } catch (error) {
+        console.log(error)
     }
-    
+
 }
 
 function getResponse() {
@@ -97,25 +103,43 @@ function getResponse() {
     $("#chatbox").append(userHtml);
     document.getElementById("chat-bar-bottom").scrollIntoView(true);
 
-    setTimeout(() => {
-        getHardResponse(userText);
-    }, 1000)
+    setTimeout(async () => {
+        await getHardResponse(userText);
+    }, 1000);
 }
 
 function buttonSendText(sampleText) {
-    let userHtml = '<p class="userText"><span>' + sampleText + '</span></p>';   
+    let userHtml = '<p class="userText"><span>' + sampleText + '</span></p>';
     document.getElementById("textInput").value = "";
     $("#chatbox").append(userHtml);
     document.getElementById("chat-bar-bottom").scrollIntoView(true);
 }
 
-function sendButton() {
-    getResponse();
-}
+document.getElementById("send-icon").addEventListener("click", getResponse);
 
-function heartButton() {
-    buttonSendText("Heart clicked");
-}
+document.getElementById("reset-icon").addEventListener("click", () => {
+    const userTextElements = chatbox.getElementsByClassName("userText");
+    const botTextElements = chatbox.getElementsByClassName("botText");
+
+    // Remove userText elements
+    while (userTextElements.length > 0) {
+        userTextElements[0].remove();
+    }
+
+    // Remove botText elements
+    for (let i = 0; i < botTextElements.length; i++) {
+        const botTextElement = botTextElements[i];
+        if (botTextElement.id !== "botStarterMessage") {
+            const childBotTextElements = botTextElement.getElementsByClassName("botText");
+            if (childBotTextElements.length === 0) {
+                botTextElement.remove();
+            }
+        }
+    }
+
+    const newTime = getTime();
+    document.getElementById("chat-timestap").innerHTML = newTime;
+})
 
 document.getElementById("textInput").addEventListener("keydown", (e) => {
     if (e.code == "Enter") {
