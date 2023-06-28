@@ -7,7 +7,9 @@
     <title>My Website</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="chat.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <script src="https://kit.fontawesome.com/140e4e4388.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="hero">
@@ -45,13 +47,15 @@
 
       <div class="introduction-container">
         <div class="intro-text-image">
-          <div class="intro-text">
-            <h1>Hello, I am</h1>
-            <h1 style="color: #0345fc">Immanuel Peter.</h1>
+          <div class="head-container">
             <div class="social-links">
               <a href="https://twitter.com/moby763canary21" class="social-link"><i class="fa fa-twitter"></i></a>
               <a href="https://www.linkedin.com/in/immanuel-peter-803813240/" class="social-link"><i class="fa fa-linkedin"></i></a>
               <a href="https://www.instagram.com/chill__egg/" class="social-link"><i class="fa fa-instagram"></i></a>
+            </div>
+            <div class="intro-text">
+              <h1>Hello, I am</h1>
+              <h1 style="color: #0345fc">Immanuel Peter.</h1>
             </div>
           </div>
           <div class="intro-image splotch">
@@ -84,8 +88,9 @@
                     <p></p>
                   </div>
                   <div class="chat-bar-icons">
-                    <i id="heart-icon" style="color: crimson;cursor: pointer;" class="fa fa-fw fa-heart" onclick="heartButton()"></i>
-                    <i id="send-icon" style="color: #606060;cursor: pointer;" class="fa fa-fw fa-send" onclick="sendButton()"></i>
+                    <i id="reset-icon" style="color: #999;cursor: pointer;" class="fa fa-fw fa-refresh"></i>
+                    <!-- <i id="send-icon" style="color: #606060;cursor: pointer;" class="fa fa-fw fa-send" onclick="sendButton()"></i> -->
+                    <i id="send-icon" style="color:#0055ff;cursor:pointer;" class="fa-solid fa-paper-plane"></i>
                   </div>
                 </div>
                   <div id="chat-bar-bottom">
@@ -105,10 +110,10 @@
     
 
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="module" src="index.js"></script>
+    <script type="module" src="responses.js"></script> 
     <script type="module" src="chat.js"></script>
-    <script type="module" src="responses.js"></script>  
+ 
     <script>
       var typed = new Typed(".input-box", {
         strings: ['Are you a night person?', 'What are your aspirations?', 'What\'s your favorite TV show?', 'Ask me anything!'],
@@ -119,5 +124,6 @@
         loop: false
       });
     </script>
+
   </body>
 </html>
