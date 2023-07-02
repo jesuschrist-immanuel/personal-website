@@ -203,6 +203,30 @@ const codecademy = {
         weeks: null,
         link: 'https://www.codecademy.com/learn/learn-redux',
         image: '/assets/redux-logo.png'
+    },
+    reactrouter: {
+        course: "Learn React Router v6",
+        finishDate: "06-24-2023",
+        hours: 1,
+        weeks: null,
+        link: 'https://www.codecademy.com/learn/learn-react-router',
+        image: '/assets/react-router.jpeg'
+    },
+    typescript: {
+        course: "Learn TypeScript",
+        finishDate: "06-27-2023",
+        hours: 10,
+        weeks: null,
+        link: 'https://www.codecademy.com/learn/learn-typescript',
+        image: '/assets/typescript-logo.png'
+    },
+    mongodb: {
+        course: "Learn MongoDB",
+        finishDate: "07-02-2023",
+        hours: 8,
+        weeks: null,
+        link: 'https://www.codecademy.com/learn/learn-mongodb',
+        image: '/assets/mongo-logo.png'
     }
 }
 
