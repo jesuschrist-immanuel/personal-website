@@ -47,7 +47,7 @@ I also heard "The greatest successes come from the freedom to fail" from Mark Zu
 My favorite productivity tool is Notion.
 I am a peer tutor on the volunteering platform, schoolhouse.world. I have over 100 hours of tutoring and over 240 followers. I tutor in Pre-algebra, Algebra 1, Geometry, Algebra 2, Precalculus, Calculus, and Statistics.
 
-I use social media, particularly Instagram and Twitter.
+I use social media, particularly Threads, Instagram, Twitter.
 
 My favorite comedians are John Mulaney, Pete Davidson, Colin Jost, Michael Che, Jimmy Carr, Dave Chapelle, Jimmy Kimmel, and Jimmy Fallon.
 My favorite kids shows are Curious George and Fetch! with Ruff Ruffman.
@@ -85,8 +85,15 @@ I finished Algebra 2, Trigonometry, and Precalculus in the summer before my 7th 
 I completed Calculus I and II in my 9th grade year.
 In my senior year, I plan to take a few math courses: Linear Algebra, Differential Equations, Multivariable Calculus, and Vector Calculus (after Multivariable Calculus).
 
+I love to code. My favorite programming languages are Python and JavaScript.
+I have taken many coding and programming courses through Codecademy, DeepLearning.AI, 365 Data Science, and edX.
+Through Codecademy, I have completed 26 courses. They include Learn Swift, Learn HTML, Learn CSS, Learn C++, C++ for Programmers, Learn Java, Learn Web Scraping with Beautiful Soup, Learn Intermediate Swift, Learn the Command Line, Learn JavaScript, Learn the Command Line, Learn JavaScript, Learn Kotlin, Analyze NFL Stats with Python Case Study, Building Interactive JavaScript Websites, Build iOS Apps with SwiftUI, Learn JavaScript: Asynchronous Programming, Build an Intermediate iOS App with SwiftUI, Linear Algebra, Intro to ChatGPT, Learn jQuery, Learn Node.js, Learn React, Learn React Native, Learn Redux, Learn React Router v6, Learn TypeScript, and Learn MongoDB. 
+Through DeepLearning.AI, I have completed ChatGPT Prompt Engineering for Developers.
+Through 365 Data Science, I have completed 24 courses. They include Introduction to Microsoft Excel, Advanced Microsoft Excel, Mathematics for Data Science, Introduction to Tableau, Power BI, Introduction to Data and Data Science, Statistics for Data Science, Probability for Data Science, SQL, SQL + Tableau, Introduction to Python, Python Programming Bootcamp, Git and GitHub, Introduction to R Programming, Machine Learning in Python, Deep Learning with TensorFlow 2.0, SQL + Tableau + Python, Data Visualization (with Python, R, Tableau, and Excel), Introduction to Business Analytics, Web Scraping and API Fundamentals in Python, and Data Cleaning and Preprocessing with pandas.
+Through edX, I am taking CS50 Web Programming with Python and JavaScript.
+
 I have also taken many Advancement Placement (AP) courses.
 In 10th grade, I self-studied AP Calculus BC (received a 5), AP Statistics (5), AP Computer Science A (5), and AP Physics 1 (3). I also took AP World History at my school and received a 5.
-In 11th grade, I self-studied AP Macroeconomics, AP Microeconomics, and AP Psychology. I also took AP Biology and AP United States History at my school.
+In 11th grade, I self-studied AP Macroeconomics (5), AP Microeconomics (4), and AP Psychology (4). I also took AP Biology (4) and AP United States History (5) at my school.
 In 12th grade, I plan to self-study AP Chemistry, AP Environmental Science, AP Human Geography, AP European History, and AP Physics 2. I will be taking AP Government and Politics at my school.
 I have self-studied 7 APs and taken 3 APs at my school. I plan to self-study 12 APs and take 4 APs at my school by the time I graduate. Ultimately, I plan to take 16 APs by the time I graduate.
